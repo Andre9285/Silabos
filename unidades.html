@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Animaciones -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="Style2.css">
+
+    <title>Unidades - Sílabo</title>
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <span>Andre</span>
+            </div>
+
+            <div class="links">
+                <a href="index.html">Inicio</a>
+                <a href="#">Acerca de</a>
+                <a href="#">Contacto</a>
+            </div>
+            <!-- Menú hamburguesa -->
+        <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+
+        <div class="dropdown"> 
+            <a href="index.html">Inicio</a>
+            <a href="#">Acerca de</a>
+            <a href="#">Contacto</a>
+            <i class="fa-solid fa-xmark cancel" onclick="cance()"></i>
+        </div>
+        </div>
+    </nav>
+
+    <!-- CONTENIDO -->
+    <section>
+        <div style="text-align:center; color:white; margin-top:20px;">
+            <h1>Unidades del Curso</h1>
+            <p>Selecciona una unidad para ver su contenido</p>
+        </div>
+
+        <div class="cards-container">
+
+            <!-- UNIDAD 1 -->
+            <div class="card">
+                <h3>Unidad 1</h3>
+                <p>Introducción a los Sistemas de Información</p>
+                <a href="unidad1.html">
+                    <button>Ver contenido</button>
+                </a>
+            </div>
+
+            <!-- UNIDAD 2 -->
+            <div class="card">
+                <h3>Unidad 2</h3>
+                <p>Desarrollo Web Básico</p>
+                <a href="unidad2.html">
+                    <button>Ver contenido</button>
+                </a>
+            </div>
+
+            <!-- UNIDAD 3 -->
+            <div class="card">
+                <h3>Unidad 3</h3>
+                <p>Base de Datos y Conexión</p>
+                <a href="unidades.html">
+                    <button>Ver contenido</button>
+                </a>
+            </div>
+
+            <!-- UNIDAD 4 -->
+            <div class="card">
+                <h3>Unidad 4</h3>
+                <p>Proyecto Final</p>
+                <a href="unidades.html">
+                    <button>Ver contenido</button>
+                </a>
+            </div>
+
+        </div>
+    </section>
+    <!-- SCRIPTS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script> 
+    <script> 
+        AOS.init({ offset: 0 });
+    </script>
+
+    <script>
+        function hamburg(){
+            const navbar = document.querySelector(".dropdown")
+            navbar.style.transform = "translateY(0px)"
+        }
+
+        function cance(){
+            const navbar = document.querySelector(".dropdown")
+            navbar.style.transform = "translateY(-400px)"
+        }
+    </script>
+
+</body>
+</html>

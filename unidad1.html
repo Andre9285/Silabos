@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Animaciones -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Unidad 1</title>
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <span>Andre</span>
+            </div>
+
+            <div class="links">
+                <a href="index.html">Inicio</a>
+                <a href="Unidades.html">Unidades</a>
+            </div>
+            <!-- Menú hamburguesa -->
+        <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+
+        <div class="dropdown"> 
+            <a href="index.html">Inicio</a>
+            <a href="Unidades.html">Unidades</a>
+            <i class="fa-solid fa-xmark cancel" onclick="cance()"></i>
+        </div>
+        </div>
+    </nav>
+
+    <!-- CONTENIDO -->
+    <section>
+        <div class="unidad-container">
+
+            <h1>Unidad 1</h1>
+            <p style="text-align:center;">Selecciona una semana para ver el contenido</p>
+
+            <div class="cards-container">
+
+                <!-- SEMANA 1 -->
+                <div class="card">
+                    <h3>Semana 1</h3>
+                    <p>Fundamentos de sistemas de información en la empresa</p>
+                    <a href="semana1.pdf" target="_blank">
+                        <button>Ver contenido</button>
+                    </a>
+                </div>
+
+                <!-- SEMANA 2 -->
+                <div class="card">
+                    <h3>Semana 2</h3>
+                    <p>Computación en la nube y modelos de despliegue</p>
+                    <a href="semana2.pdf" target="_blank">
+                        <button>Ver contenido</button>
+                    </a>
+                </div>
+
+                <!-- SEMANA 3 -->
+                <div class="card">
+                    <h3>Semana 3</h3>
+                    <p>Administración y tecnologías en la nube</p>
+                    <a href="semana3.pdf" target="_blank">
+                        <button>Ver contenido</button>
+                    </a>
+                </div>
+
+                <!-- SEMANA 4 -->
+                <div class="card">
+                    <h3>Semana 4</h3>
+                    <p>Infraestructura de TI y sus componentes</p>
+                    <a href="semana4.pdf" target="_blank">
+                        <button>Ver contenido</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+   </section>
+   <!-- SCRIPTS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script> 
+    <script> 
+        AOS.init({ offset: 0 });
+    </script>
+
+    <script>
+        function hamburg(){
+            const navbar = document.querySelector(".dropdown")
+            navbar.style.transform = "translateY(0px)"
+        }
+
+        function cance(){
+            const navbar = document.querySelector(".dropdown")
+            navbar.style.transform = "translateY(-400px)"
+        }
+    </script>
+
+</body>
+</html>
+
